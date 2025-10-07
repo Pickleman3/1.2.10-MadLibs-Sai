@@ -9,3 +9,8 @@ The hardest part about this was actualy creating the story, because I am not a v
 
 
 <img width="1905" height="1096" alt="results" src="https://github.com/user-attachments/assets/34317dc0-cd63-4b17-85c5-6c3a265f685e" />
+
+
+Day 3: It turns out I did the entir program wrong. I was suppose to replace it, but not manually. So the user types in the input, and instead of me preinting it the replacement, the progam needed to do that. So I fixed that. Initially I used the .replace function to do the job, but Mr.Baez said it works, but to try and get familiar with the .substring so I created two programs for that. 
+
+<img width="1457" height="251" alt="nice" src="https://github.com/user-attachments/assets/dfb2c29b-67c2-4e8f-b41d-191b55e31c38" />
