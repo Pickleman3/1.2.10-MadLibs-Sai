@@ -1,46 +1,44 @@
-
-//Import the java scanner
+//This is the first way. I have another one
 import java.util.Scanner;
 public class Choudarypally_MadLibs {
     public static void main(String[] args){
-       //Create the story
-        System.out.println("There onace was a man named (noun) and he was quite (adjective). One day he went outside to (verb) to a girl, but he got rejected. He decided to go to a bar where he would meet a boy named Arnav. Arnav was a (adverb) special man and he said if he could eat a mushroomed then he could make a love potion. So he went on a journey towards the place called (noun). Unfortunately on the way there he died.");
-
-        // Create the scanner and ask for inputs
+        //story 
+        String story = "There once was a man named (noun) and he was quite (adjective). One day he went outside to (verb) to a girl, but he got rejected. He decided to go to a bar where he would meet a boy named Arnav. Arnav was a (adverb) special man and he said if he could eat a mushroomed then he could make a love potion. So he went on a journey towards the place called [noun]. Unfortunately on the way there he died.";
+        //create the scanner
         Scanner scanner = new Scanner(System.in);
 
-        //input 1
-        System.out.print("Enter first string: ");
-        String S1 = scanner.nextLine();
-        System.out.println("First String " + S1);
-        System.out.println("There onace was a man named" + S1 + "and he was quite (adjective). One day he went outside to (verb) to a girl, but he got rejected. He decided to go to a bar where he would meet a boy named Arnav. Arnav was a (adverb) special man and he said if he could eat a mushroomed then he could make a love potion. So he went on a journey towards the place called (noun). Unfortunately on the way there he died.");
-        
-        //input 2
-        System.out.print("Enter first string: ");
-        String S2 = scanner.nextLine();
-        System.out.println("Second String " + S2);
-        System.out.println("There onace was a man named" + S1 + "and he was quite" + S2 + ". One day he went outside to (verb) to a girl, but he got rejected. He decided to go to a bar where he would meet a boy named Arnav. Arnav was a (adverb) special man and he said if he could eat a mushroomed then he could make a love potion. So he went on a journey towards the place called (noun). Unfortunately on the way there he died.");
+        // Replace first (noun)
+        System.out.print("Enter a noun: ");
+        String input1 = scanner.nextLine();
+        int index1 = story.indexOf("(noun)");
+        story = story.substring(0, index1) + input1 + story.substring(index1 + "(noun)".length());
 
-        //input3
-        System.out.print("Enter first string: ");
-        String S3 = scanner.nextLine();
-        System.out.println("Thrid String " + S3);
-        System.out.println("There onace was a man named" + S1 + "and he was quite" + S2 + ". One day he went outside to" + S3 + "to a girl, but he got rejected. He decided to go to a bar where he would meet a boy named Arnav. Arnav was a (adverb) special man and he said if he could eat a mushroomed then he could make a love potion. So he went on a journey towards the place called (noun). Unfortunately on the way there he died.");
+        // Replace (adjective)
+        System.out.print("Enter an adjective: ");
+        String input2 = scanner.nextLine();
+        int index2 = story.indexOf("(adjective)");
+        story = story.substring(0, index2) + input2 + story.substring(index2 + "(adjective)".length());
 
+        // Replace (verb)
+        System.out.print("Enter a verb: ");
+        String input3 = scanner.nextLine();
+        int index3 = story.indexOf("(verb)");
+        story = story.substring(0, index3) + input3 + story.substring(index3 + "(verb)".length());
 
-        //input 4
-        System.out.print("Enter first string: ");
-        String S4 = scanner.nextLine();
-        System.out.println("Fourth String " + S4);
-        System.out.println("There onace was a man named" + S1 + "and he was quite" + S2 + ". One day he went outside to" + S3 + "to a girl, but he got rejected. He decided to go to a bar where he would meet a boy named Arnav. Arnav was a " + S4 + "special man and he said if he could eat a mushroomed then he could make a love potion. So he went on a journey towards the place called (noun). Unfortunately on the way there he died.");
+        // Replace (adverb)
+        System.out.print("Enter an adverb: ");
+        String input4 = scanner.nextLine();
+        int index4 = story.indexOf("(adverb)");
+        story = story.substring(0, index4) + input4 + story.substring(index4 + "(adverb)".length());
 
-        //input 5
-        System.out.print("Enter first string: ");
-        String S5 = scanner.nextLine();
-        System.out.println("Fifth String " + S5);
+        // Replace [noun]
+        System.out.print("Enter a place (noun): ");
+        String input5 = scanner.nextLine();
+        int index5 = story.indexOf("[noun]");
+        story = story.substring(0, index5) + input5 + story.substring(index5 + "[noun]".length());
 
-        //final story with inputs
-        System.out.println("There onace was a man named" + S1 + "and he was quite" + S2 + ". One day he went outside to" + S3 + "to a girl, but he got rejected. He decided to go to a bar where he would meet a boy named Arnav. Arnav was a "+ S4 +  "special man and he said if he could eat a mushroomed then he could make a love potion. So he went on a journey towards the place called " + S5 + ". Unfortunately on the way there he died.");
+        System.out.println("\n" + story);
+
+        scanner.close();
     }
-       
 }
